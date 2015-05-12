@@ -1,0 +1,462 @@
+
+<!DOCTYPE html><!DOCTYPE html><html class=" ltr" lang="en" dir="ltr" data-doctype="true"><head><title>External Affairs</title><meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible"></meta><meta content="public" http-equiv="cache-control"></meta><link href="favicon.ico?v=4" rel="shortcut icon"></link><link type="text/css" href="exa.css" rel="stylesheet"></link><script type="text/javascript" href="custom_script_ess.js">var g_loadTime = new Date();
+    var lastActivity = new Date();
+    var g_lang = 'en';
+    var g_popup_timeout = parseInt(100);	
+    var g_export_warn_threshold = parseInt(10000);
+    var g_event_handler_ids = {};	
+    var g_event_handlers = new Array();
+    var g_event_handlers_onLoad = new Array();
+    var g_event_handlers_onSubmit = new Array();
+    var g_event_handlers_onChange = new Array();
+    var g_event_handlers_onCellEdit = {};
+    var g_user_date_time_format = "yyyy-MM-dd HH:mm:ss";
+    var g_user_date_format = "yyyy-MM-dd";
+    var g_user_decimal_separator = ".";
+    var g_user_grouping_separator = ",";
+    var g_glide_list_separator = ", ";
+    var g_tz_offset = -25200000;
+    var g_first_day_of_week = parseInt(1, 10);
+    var g_date_picker_first_day_of_week = parseInt(0, 10);
+    var g_submitted = false;
+    var g_max_table_length = 30;
+    var g_fontSizePreference = "9pt";
+    var g_fontSize = "11pt";
+    var g_jsErrorNotify = "false";
+    var g_cancelPreviousTransaction = true;
+    var g_text_direction = "ltr";
+    var g_glide_list_filter_max_length =  parseInt("0", 10);
+	var g_accessibility = false;
+    
+    var g_acWaitTime = parseInt(250);var g_autoRequest = '';</script><script type="text/javascript" src="/scripts/doctype/js_includes_doctype.jsx?v=03-10-2015_0442&amp;lp=Mon_Mar_16_07_20_29_PDT_2015&amp;c=4_36"></script><script type="text/javascript" src="/scripts/doctype/js_includes_legacy.jsx?v=03-10-2015_0442&amp;lp=Mon_Mar_16_07_20_29_PDT_2015&amp;c=4_36"></script><script type="text/javascript">(function() {
+      var preferences = {};
+      var properties = {};preferences["glide.ui.navpage.state"] = '{\"formPane\":\"east\",\"edge_center.north.isClosed\":false,\"edge_center.west.isClosed\":false,\"edge_center.west.size\":184,\"main.south.isClosed\":true,\"main.south.size\":\"37%\",\"main.east.isClosed\":false,\"main.east.size\":\"37%\"}';GlideManager.init({
+        preferences: preferences,
+        properties: properties
+      });
+    })();
+    
+    /**
+     * Every window needs to observe these events.
+     */
+    if (Prototype.Browser.IE && !isMSIE9) {
+      document.onfocusout = function() { CustomEvent.fireTop(GlideEvent.WINDOW_BLURRED, window); };
+      document.onfocusin = function() { CustomEvent.fireTop(GlideEvent.WINDOW_FOCUSED, window); };
+    } else {
+      Event.observe(window, 'blur', function() { CustomEvent.fireTop(GlideEvent.WINDOW_BLURRED, window); });
+      Event.observe(window, 'focus',  function() { CustomEvent.fireTop(GlideEvent.WINDOW_FOCUSED, window); });
+    }</script><script type="text/javascript">g_swLoadTime = new StopWatch(g_loadTime);
+
+    if (window.CustomEvent)
+        CustomEvent.fireAll("ck_updated", "");
+
+    Event.observe(window, 'load', function() {
+      if (typeof g_ck != 'undefined') {
+        CustomEvent.observe("ck_updated", function(ck) { g_ck = ck; });
+        CustomEvent.fireAll("ck_updated", "");CustomEvent.fireTop('user.impersonation', '');}try {
+              var helpico=getTopWindow().document.getElementById("help_ico");
+              if (helpico) {
+                var urlname=window.location.pathname.split("?");
+                var search_str = window.location.search;
+                
+                // if this is a form, extract the record's sys_id...
+                var sys_id_loc = search_str.search(/sys_id=[0-9a-f]{32}/i);
+                var sys_id_str = (sys_id_loc != -1) ? search_str.substr(sys_id_loc, 39) : null;
+                
+                // make the URL to our context help processor...
+                var url_search = "?sysparm_url=" + urlname[0];
+                if (sys_id_loc != -1)
+                   url_search += "&" + sys_id_str;
+                helpico.href="context_help.do" + url_search;
+              }
+            } catch (exception) {}synchCache();
+      pageLoaded();
+    });
+    
+    function synchCache() {
+      try {
+        var w = getTopWindow();
+        if (w.g_cache_message)
+          w.g_cache_message.stamp("7b6831137d033100c9988780b852f5b4");
+  
+        if (w.g_cache_td)
+          w.g_cache_td.stamp("32edc7937d833100c9988780b852f5b5");
+      } catch(e) {}
+    }</script><link type="text/css" href="8114ad08609451009637fb67a49efa6b.cssdbx?v=2013-10-03 22:28:43" rel="stylesheet"></link><link type="text/css" rel="stylesheet" href="0114ad08609451009637fb67a49efa63.cssdbx?v=2013-10-18 22:53:28"></link><link type="text/css" rel="stylesheet" href="8114ad08609451009637fb67a49efa65.cssdbx?v=2013-10-03 22:28:43"></link><link type="text/css" rel="stylesheet" href="8114ad08609451009637fb67a49efa68.cssdbx?v=2013-10-03 22:28:43"></link><link type="text/css" rel="stylesheet" href="8914ad08609451009637fb67a49efa66.cssdbx?v=2013-10-03 22:28:43"></link><link type="text/css" rel="stylesheet" href="8914ad08609451009637fb67a49efa69.cssdbx?v=2014-11-18 18:30:35"></link><meta content="UCLA, University of California Los Angeles, UCLA Bruins" name="keywords"></meta><meta content="UCLA (University of California, Los Angeles) is the largest UC campus in terms of enrollment, and one of the few public research universities located in a major city." name="description"></meta><script type="text/javascript">// NOTE: this code runs before functions.js (or any js file) is loaded
+	window.g_fontSizeMessage = "Font size";	
+	if (g_fontSizePreference)
+		setPreferredFontSize(0);  // adjust to user preference</script><!--googleoff: all--><noscript>This site requires JavaScript to be enabled</noscript> <!--googleon: all--></head><body onclick="CustomEvent.fireAll('body_clicked', event);" onFocus="popupClose();" ontouchend="CustomEvent.fireAll('body_clicked', event);" data-formName="view_content"><script type="text/javascript" src="/scripts/GlideV2ChartingIncludes.jsx?v=03-10-2015_0442"></script><script type="text/javascript" src="/scripts/text_search.jsx?v=03-10-2015_0442"></script><script type="text/javascript" src="/scripts/cms_utils.jsx?v=03-10-2015_0442"></script><div class="cms_layout_outer_container" align="center"><div class="cms_layout_container" align="center"><div id="mainContainer"><div id="topBar"><div id="topBarContainer"><a style="text-decoration:none;float:left; margin-top: 5px;" href="http://www.ucla.edu">UCLA Home</a><form action="../logout.do" name="logoutPage"><input value="logout_redirect.do?sysparm_url=exa/index.do" type="hidden" name="sysparm_goto_url"></input><div class="joeemployee"><span id="welcomeMessage">Welcome,&nbsp;<b>EVAN SULLIVAN</b>&nbsp;&nbsp;|&nbsp;<a onclick="logoutPage.submit()">Logout</a>&nbsp;&nbsp;</span></div></form></div></div><div id="header"><div id="headerContent"><h1><img src="images/ucla_logo.png"></img></h1><div class="-tilePlaceHolder"><p class="servicedesk-heading">Service Desk</p><div id="departmentTitle"><div class="-tile-content"><p>External Affairs</p></div></div></div><div id="header-nav"><div id="main-nav-wrapper"><ul id="main-nav"><li class="portaltab-home plain"><a href="index.do" class="plain">Home<span class="navIcon"></span></a></li><li class="portaltab-knowledge plain"><a href="kb.do" class="plain">News & Knowledge<span class="navIcon"></span></a></li><li class="portaltab-about plain"><a href="getStarted.do" class="plain">About<span class="navIcon"></span></a></li></ul><div style="height: 0px;" id="dropdown-spacer"></div></div></div></div></div><table cellpadding="0" class="cms_layout_table 2_column ess_layout" height="100%" border="0" cellspacing="0" width="100%"><tr><td id="dropzone0" valign="top" dropzone="true" width="auto"></td><td id="dropzone1" class="cms_layout_content_body" height="100%" valign="top" dropzone="true" width="960px"><span style='display: none;'>IE BUMPER</span>
+<div class="container">
+		<div class="billboardtile">
+			<div class="-tile-content">
+				<img height="278" width="960" src="images/exa_selfservice_banner.jpg"></img></div>
+                        <div class="billboardLinks">
+                           <button type="button" onClick="javascript:window.location.href='help.do'" class="billboardStatus">My Ticket Status</button>
+                            <button type="button" onClick="javascript:window.location.href='kb.do'">News & Knowledge</button></div></div>
+		<div id="main-content">
+            <div id = "categoryMenuHeader">
+                <h3>What can we help you with?</h3>
+            </div>
+			
+			<div id="categoryMenuContainer">
+				<div class="leftCategoryItemsViewport">
+                                 	
+                                 <ul> 
+                                 <li><button type="button" onClick="switchSubcategory('accountsAndLogIns')">Accounts & Log-Ins</button></li>
+                                 <li><button type="button" onClick="switchSubcategory('applications')">Applications</button></li>
+                                     <li><button type="button" onClick="switchSubcategory('borrowEquipment')">Borrow Equipment</button></li>
+                                     <li><button type="button" onClick="switchSubcategory('computerEquipment')">Computer Hardware</button></li>
+                    <li><button type="button" onClick="switchSubcategory('crm')">CRM</button></li>
+                    <li><button type="button" onClick="switchSubcategory('email')">E-Mail</button></li>
+                    <li><button type="button" onClick="switchSubcategory('filesAndSharedDrives')">Files & Shared Drives</button></li>
+                    <li><button type="button" onClick="switchSubcategory('mobileDevices')">Mobile Devices</button></li>
+                    <li><button type="button" onClick="switchSubcategory('networkAndWiFi')">Network & Wi-Fi</button></li>
+                    <li><button type="button" onClick="switchSubcategory('printersAndScanners')">Printers & Scanners</button></li>
+                    <li><button type="button" onClick="switchSubcategory('misc')">Misc.</button></li></ul></div>
+                             
+		                <div class="subCategoryItemsViewport">
+                            <div id = "subcategoryPlaceholder">
+                                <img class="photo" src="images/CMS_Get_Help.jpg" height="150" width="216"> </img>
+                                <h4>Select a category on the left...</h4>
+                            </div>
+                                 <ul id="subcategoryList"> 
+                                     
+                                 </ul>
+                                </div>
+                <a href= "https://ucla.service-now.com/exa/catalog.do">
+                    <div id = "categoryFooterBar"><h4>See all items...</h4></div>
+                </a>
+            </div>
+            
+        </div></div></td><td id="dropzone2" valign="top" dropzone="true" width="auto"></td></tr></table></div></div></div><script src="jquery_custom_min.jsdbx" language="javascript"></script><script src="custom_script_ess.jsdbx" language="javascript"></script><xml id="cms_type_map"><content_type type="SITE_DEFAULT" page=""></content_type><content_type type="DEFAULT" page=""></content_type></xml><div style="border:none; visibility:hidden"><form action="slushbucket.do" method="GET" style="display:inline" name="sys_personalize"><input type="hidden" value="view_content.do" name="sysparm_referring_url"></input><input type="hidden" value="" name="sysparm_view"></input></form></div><script>(function() {
+        addLateLoadEvent(throwFrameLoaded);
+        // find if padding is needed
+        var pad = (isMSIE6 || isMSIE7 || navigator.userAgent.indexOf('MSIE 8') != -1) ? 1 : 0;
+
+        function throwFrameLoaded() { 
+            try {
+                if (window.parent.CustomEvent) {
+                    // history suggests that if we don't size it down on page load,
+                    // when we check the height it will show the previous page's height
+                    window.parent.CustomEvent.fire('content_frame.loaded', self.name, 10);
+                    window.parent.CustomEvent.fire('content_frame.loaded', self.name, getPageHeight()); 
+                }
+            } catch (e) {}
+
+        }
+
+        function throwFrameSized() { 
+            try {
+                if (window.parent.CustomEvent) {
+                    // IE9/IE10: resize events will be continuously triggered when there is a difference between document.body.scrollHeight and window.frameElement.height
+                    // to solve this issue, we do not fire event if the height we are going to set is the same as the height obtained after the previous fired event
+                    var previousHeight = window["g_iframe_height"];
+                    var pageHeight = getPageHeight();
+                    if (previousHeight != pageHeight) {
+                        window.parent.CustomEvent.fire('content_frame.resized', self.name, pageHeight);
+                        // IE9/IE10: page height may be changed again after the above firing. So we have to call getPageHeight() to get the new height after the above event has been fired.
+                        window["g_iframe_height"] = getPageHeight();
+                    }
+                }
+            } catch (e) {}
+        }
+
+        /**
+         *  Simply speaking, scrollHeight and offsetHeight work differently on different browsers
+         *  and in and out of quirks mode. IE9 has bugs that do not report them correctly even if
+         *  you pick the right one, so we've built some extra controls.
+         */
+        function getPageHeight() {
+            var popupElement, popupHeight;
+            // first, look for popup
+            if ($$('body > div.popup').length > 0) {
+                popupElement = $$('body > div.popup')[0];
+                popupHeight = popupElement.scrollHeight + popupElement.offsetTop;
+                //padding is needed or else the bottom border of the popup will be missing
+                return (document.body.scrollHeight > popupHeight ? document.body.scrollHeight : popupHeight) + pad;
+            }
+
+            // then, look for form elements
+            // use more specific selector to reduce browser response time
+            if ($$('body > div.section_header_content_no_scroll').length > 0)
+                return $$('body > div.section_header_content_no_scroll')[0].scrollHeight;
+
+            // then, look for touch scroll elements *CALGARY and forward*
+            if ($$('body > .touch_scroll').length > 0)
+                return $$('body > .touch_scroll')[0].scrollHeight;
+
+            // then, get the normal page height
+            if (document.body.scrollHeight)
+                return document.body.scrollHeight;
+
+            return document.body.offsetHeight;
+        }
+
+        // start observing only after page has been loaded to avoid handling large number of resize events especially on IE 7 and IE 8
+        addAfterPageLoadedEvent(function() {
+            CustomEvent.observe('frame.resized', throwFrameSized);
+            Event.observe(document.onresize ? document : window, "resize", throwFrameSized);
+            _frameChanged();
+        });
+    })();
+//BEGIN EA CUSTOM FUNCTION --------------------------------------------------------------
+function switchSubcategory (selectedSubcategory) {
+    var categories = {
+        accountsAndLogIns: [
+        {Title: "I'm having trouble logging in to...",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3De27875e109c55100963780fde6ca6e3c%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,e27875e109c55100963780fde6ca6e3c"},
+        {Title: "New account request (non-email)",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Db1656904b4e7c10096370c9e26dac430%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,b1656904b4e7c10096370c9e26dac430"},
+        {Title: "New email account request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D09b7d962a59009009637a3d5b5301cc5%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,09b7d962a59009009637a3d5b5301cc5"},
+        {Title: "Email account access request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3De5875522a59009009637a3d5b5301c9a%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,e5875522a59009009637a3d5b5301c9a"},
+        {Title: "Password reset request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D956b19c0b4e7c10096370c9e26dac443%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,956b19c0b4e7c10096370c9e26dac443"},
+        {Title: "FTP access request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Dec94a4cc605451009637fb67a49efaf8%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,ec94a4cc605451009637fb67a49efaf8"}
+        ],
+        applications: [
+        {Title: "I'm having trouble with an application",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3De27875e109c55100963780fde6ca6e3c%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,e27875e109c55100963780fde6ca6e3c"},
+        {Title: "I'm having trouble with Citrix",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3De27875e109c55100963780fde6ca6e3c%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,e27875e109c55100963780fde6ca6e3c"},
+        {Title: "I have a question about using an application",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Dc7510764a59c85009637a3d5b5301c66%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,c7510764a59c85009637a3d5b5301c66"},
+        {Title: "Online meeting request (Adobe Connect)",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D773a679409d55500963780fde6ca6e36%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,773a679409d55500963780fde6ca6e36"},
+        {Title: "New application or software request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Dbd79e0aaa55009009637a3d5b5301c8d%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,bd79e0aaa55009009637a3d5b5301c8d"},
+        {Title: "Mobile application or service request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Da4e4caf4e0de2900952891e7adc46363%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,a4e4caf4e0de2900952891e7adc46363"},
+        {Title: "View all Applications requests with descriptions...",
+        Link: "application_services.do"}
+        ],
+        borrowEquipment: [
+        {Title: "Borrow a laptop",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D65a98f0009b9d540963780fde6ca6e76%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,65a98f0009b9d540963780fde6ca6e76"},
+        {Title: "PCI device request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D059c9eed09c55100963780fde6ca6e03%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,059c9eed09c55100963780fde6ca6e03"},
+        {Title: "Borrow a hotspot, presentation clicker, etc.",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D5e4086a1870431009637d0ae59434d55%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,5e4086a1870431009637d0ae59434d55"}
+        ],
+        computerEquipment: [
+        {Title: "I'm having trouble with computer hardware",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3De27875e109c55100963780fde6ca6e3c%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,e27875e109c55100963780fde6ca6e3c"},
+        {Title: "Schedule a computer move",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Dd263c724a59c85009637a3d5b5301c28%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,d263c724a59c85009637a3d5b5301c28"},
+        {Title: "New mouse request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D87dddd22a59009009637a3d5b5301ce7%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,87dddd22a59009009637a3d5b5301ce7"},
+        {Title: "New keyboard request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D109d1da2a59009009637a3d5b5301cae%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,109d1da2a59009009637a3d5b5301cae"},
+        {Title: "New monitor request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D47ae9169b41b410096370c9e26dac452%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,47ae9169b41b410096370c9e26dac452"},
+        {Title: "New laptop request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D6f09dd62a59009009637a3d5b5301cbc%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,6f09dd62a59009009637a3d5b5301cbc"},
+        {Title: "Computer upgrade request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D069a24aaa55009009637a3d5b5301c3b%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,069a24aaa55009009637a3d5b5301c3b"},
+        {Title: "Request hardware not listed above...",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D076da2f9bdba610095288482cadef6a2%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,076da2f9bdba610095288482cadef6a2"},
+        {Title: "Computer speakers request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D484ed1a2a59009009637a3d5b5301c91%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,484ed1a2a59009009637a3d5b5301c91"},
+        {Title: "View all hardware requests with descriptions...",
+        Link: "hardware_services.do"}
+        ],
+        crm: [
+        {Title: "I'm having trouble with CRM",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D0911fd4460e25500963747b1852be6d5%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,0911fd4460e25500963747b1852be6d5"},
+        {Title: "I have a question about using CRM",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D067b610460e25500963747b1852be675%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,067b610460e25500963747b1852be675"},
+        {Title: "CRM access request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D6f79714860e25500963747b1852be66d%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,6f79714860e25500963747b1852be66d"},
+        {Title: "I have a suggestion related to CRM",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Da72b028c60e25500963747b1852be688%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,a72b028c60e25500963747b1852be688"}
+        ],
+        email: [
+        {Title: "I'm having trouble with Outlook / email",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3De27875e109c55100963780fde6ca6e3c%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,e27875e109c55100963780fde6ca6e3c"},
+        {Title: "I have a question about using Outlook / email",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Dc7510764a59c85009637a3d5b5301c66%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,c7510764a59c85009637a3d5b5301c66"},
+        {Title: "New email account request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D09b7d962a59009009637a3d5b5301cc5%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,09b7d962a59009009637a3d5b5301cc5"},
+        {Title: "Email account access request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3De5875522a59009009637a3d5b5301c9a%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,e5875522a59009009637a3d5b5301c9a"},
+        {Title: "Additional mailbox capacity request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D57c7a46aa55009009637a3d5b5301cde%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,57c7a46aa55009009637a3d5b5301cde"},
+        {Title: "Email name change request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D4e479962a59009009637a3d5b5301ca8%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,4e479962a59009009637a3d5b5301ca8"},
+        {Title: "Email distribution list request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Dd72c68d4b45b010096370c9e26dac42d%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,d72c68d4b45b010096370c9e26dac42d"},
+        {Title: "View all email requests with descriptions...",
+        Link: "email_services.do"}
+        ],
+        filesAndSharedDrives: [
+        {Title: "I'm having trouble with files or shared drives",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3De27875e109c55100963780fde6ca6e3c%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,e27875e109c55100963780fde6ca6e3c"},
+        {Title: "I have a question about files or shared drives",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Dc7510764a59c85009637a3d5b5301c66%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,c7510764a59c85009637a3d5b5301c66"},
+        {Title: "File recovery request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D2178fc5cb45b010096370c9e26dac4ab%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,2178fc5cb45b010096370c9e26dac4ab"},
+        {Title: "Shared drive access request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D89476c6aa55009009637a3d5b5301c50%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,89476c6aa55009009637a3d5b5301c50"},
+        {Title: "New Shared folder request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D6ed1752ea59009009637a3d5b5301c7a%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,6ed1752ea59009009637a3d5b5301c7a"},
+        {Title: "Network drive capacity increase request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D64082c2aa55009009637a3d5b5301c47%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,64082c2aa55009009637a3d5b5301c47"},
+        {Title: "View all file & shared drive requests with descriptions...",
+        Link: "file_services.do"}
+        ],
+        mobileDevices: [
+        {Title: "I'm having trouble with a mobile device",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3De27875e109c55100963780fde6ca6e3c%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,e27875e109c55100963780fde6ca6e3c"},
+        {Title: "I have a question about using a mobile device",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Dc7510764a59c85009637a3d5b5301c66%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,c7510764a59c85009637a3d5b5301c66"},
+        {Title: "Mobile application or service request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Da4e4caf4e0de2900952891e7adc46363%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,a4e4caf4e0de2900952891e7adc46363"},
+        {Title: "New mobile phone request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D71e6775ca50805009637a3d5b5301c47%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,71e6775ca50805009637a3d5b5301c47"},
+        {Title: "New tablet request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Df8f8dd62a59009009637a3d5b5301c6b%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,f8f8dd62a59009009637a3d5b5301c6b"}
+        ],
+        networkAndWiFi: [
+        {Title: "I'm having trouble connecting to...",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3De27875e109c55100963780fde6ca6e3c%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,e27875e109c55100963780fde6ca6e3c"},
+        {Title: "I have a question about connecting to...",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Dc7510764a59c85009637a3d5b5301c66%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,c7510764a59c85009637a3d5b5301c66"},
+        {Title: "Website or DNS request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D070f5dd40024690096375e9feb8c1ff6%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,070f5dd40024690096375e9feb8c1ff6"}
+        ],
+        printersAndScanners: [
+        {Title: "I have a question about a printer or scanner",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Dc7510764a59c85009637a3d5b5301c66%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,c7510764a59c85009637a3d5b5301c66"},
+        {Title: "I'm having trouble with a printer or scanner",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3De27875e109c55100963780fde6ca6e3c%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,e27875e109c55100963780fde6ca6e3c"},
+        {Title: "I need to be connected to a printer",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D3c3994bc87920d0095288e8609434d69%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,3c3994bc87920d0095288e8609434d69"},
+        {Title: "New printer request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Db668586387e1050095288e8609434d30%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,b668586387e1050095288e8609434d30"},
+        {Title: "New scanner request",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Dc3ed5da2a59009009637a3d5b5301c89%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,c3ed5da2a59009009637a3d5b5301c89"}
+        ],
+        misc: [
+        {Title: "I need help with something not in the listed categories",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3De27875e109c55100963780fde6ca6e3c%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,e27875e109c55100963780fde6ca6e3c"},
+        {Title: "I have a question not in the listed categories",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Dc7510764a59c85009637a3d5b5301c66%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,c7510764a59c85009637a3d5b5301c66"},
+        {Title: "I have a request not in the listed categories",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D3c3994bc87920d0095288e8609434d69%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,3c3994bc87920d0095288e8609434d69"},
+        {Title: "Schedule a computer move",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3Dd263c724a59c85009637a3d5b5301c28%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,d263c724a59c85009637a3d5b5301c28"},
+        {Title: "I have a suggestion",
+        Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D2a5cec2709411500963780fde6ca6edf%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,2a5cec2709411500963780fde6ca6edf"}
+        ]
+    };
+    
+    var subcategoryList = document.getElementById('subcategoryList');
+    var subcategoryPlaceholder = document.getElementById('subcategoryPlaceholder');
+    subcategoryList.innerHTML = "";
+    subcategoryList.style.display = "inline";
+    subcategoryPlaceholder.style.display = "none";
+
+    console.log("Selected Subcategory" + selectedSubcategory);
+    
+    for (var i = 0; i < categories[selectedSubcategory].length; i++) {
+        console.log(categories[selectedSubcategory][i].Title);
+        var listItem = document.createElement('li');
+        var button = document.createElement('button');
+        var chevronImage = document.createElement('img');
+        subcategoryList.appendChild(listItem);
+        listItem.appendChild(button);
+        listItem.appendChild(chevronImage);
+        chevronImage.className = "subcategoryChevron";
+        chevronImage.src = "chevron.pngx";
+        button.type = "button";
+        button.innerHTML = categories[selectedSubcategory][i].Title;
+        button.href = categories[selectedSubcategory][i].Link;
+        button.onclick =  function(arg) {
+            return function() {
+                javascript:window.location.href = arg;
+            }
+        }(categories[selectedSubcategory][i].Link);
+    }
+}
+//END EA CUSTOM FUNCTION --------------------------------------------------------------
+    function goToCatalogTask(selectedLink) {
+        javascript:window.location.href = selectedLink;
+    }
+    function printLOL (inputString) {
+        console.log(inputString)
+    }
+</script><span style="display:none" data-comments="contributions"></span><span style="display:none" data-comments="js_includes_last_doctype"></span><script type="text/javascript" src="/scripts/doctype/js_includes_last_doctype.jsx?v=03-10-2015_0442&amp;lp=Mon_Mar_16_07_20_29_PDT_2015&amp;c=4_36"></script><span style="display:none" data-comments="requires"></span><script type="text/javascript" src="/scripts/js_includes_listv2.jsx?v=03-10-2015_0442&amp;lp=Mon_Mar_16_07_20_29_PDT_2015&amp;c=4_36"></script><span style="display:none" data-comments="html_page_script_bottom"></span><script type="text/javascript">addLoadEvent(function() {
+        GlideUI.get().fireNotifications();
+    });
+
+    addLoadEvent(function() {  
+       // changeHandlerHack
+       jslog("fireAllChangeHandlers start");
+       fireAllChangeHandlers();
+       jslog("fireAllChangeHandlers end");
+    });
+   
+    runBeforeRender.defer();
+
+   
+    addLateLoadEvent(function() {
+        CustomEvent.fireTop('page_loaded_fully');
+    });
+    
+    // run all of the addLoad and addLateLoad functions
+	// last deferred include runs the on after all loaded functions
+	// see functions_bootstrap.js::runAfterAllLoaded for details on why we cannot defer execution of runAfterAllLoaded on IE6
+	//    (hint: it is due to using the window.onload event to run the addRenderEvents and addLoadEvents in IE6)
+	if (!isMSIE6)
+	    runAfterAllLoaded.defer();
+	else
+	    runAfterAllLoaded();</script><span style="display:none" data-comments="db_context_menu_script"></span><span style="display:none" data-comments="db_context_menu_script"></span><script id="glide:page_timing_div" type="application/xml"><img class="pointerhand" title="Response time(ms): #{RESP}, network: #{NETW}, browser: #{REND}, server: #{SERV}" src="images/response_time.gifx" height="12" width="12"></img><span style="display:none" class="timing_span">Response time(ms): #{RESP}, network: #{NETW}, server: #{SERV},&nbsp;<a class="timing_span">browser: #{REND}</a><span style="position:relative; width: 1px;">&nbsp;<span style="position:absolute; bottom:0px; right:0px"><span id="page_timing_details"></span><a><div>&nbsp;</div></a></span></span></span></script><script id="glide:page_timing_details" type="application/xml"><div class="timing_details">#{details}</div></script><script id="glide:page_timing_detail_line" type="application/xml"><div data-children="#{child_count}" class="timing_detail_line #{has_children}">#{HTML:name}: #{ms}
+         #{children}</div></script><script id="glide:page_timing_child_line" type="application/xml"><div class="timing_detail_line timing_detail_line_child">#{HTML:name}: #{ms}</div></script><script type="text/javascript">var g_serverTime = parseInt("45") + parseInt("0");
+            var g_logClientViewRoles = "";
+
+            // do not do this for the navigation menu
+            if (window.name != 'gsft_nav') {
+               addLoadEvent(function() {
+                  CustomEvent.fire('page_timing', { name: 'SERV', ms: g_serverTime });
+                  CustomEvent.fire('page_timing_network', { name: 'NETW', loadTime: g_loadTime });
+                  CustomEvent.fire('page_timing', { name: 'REND', startTime: g_loadTime });
+                  CustomEvent.fire('page_timing_show', { show: 'true' });
+                  CustomEvent.observe('partial.page.reload', function() {
+                     CustomEvent.fire('page_timing_clear');
+                  });
+               });
+            }
+            
+            // The following line is used to set the time when we start requesting a new page
+            Event.observe(window, 'beforeunload', function() {
+				try {
+	                //PRB591320: Wrapping windows.parent  call inside try-catch block
+	                //to avoid javascript access denial error when called from embedded iframe URL/source is different domain
+    				window.parent['g_startTime'] = new Date().getTime();
+				} catch (e) {}
+                CustomEvent.fireTop('request_start', document);
+            });
+            
+            // simple pages fire this (stats.do, etc.)
+            CustomEvent.observe('simple_page.unload', function() {
+                try {
+	                //PRB591320: Wrapping windows.parent  call inside try-catch block
+	                //to avoid javascript access denial error when called from embedded iframe URL/source is different domain
+                    window.parent['g_startTime'] = new Date().getTime();
+                } catch (e) {}
+            }); 
+
+            // indicate we have completed the request (used by RequestManager.js for cancel widget)
+            addLoadEvent(function() {
+               CustomEvent.fireTop("request_complete", window.location);var o = {};
+	      o.types = {};
+	
+	      o.transaction_id = '2c4253177d833100c9988780b852f5bb';
+	      o.table_name = '';
+	      o.form_name = 'view_content';
+	      o.view_id = 'Default view';
+	      o.win = window;
+	      CustomEvent.fire('page_timing_client', o);
+	   });</script></body></html>
