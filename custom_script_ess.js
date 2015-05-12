@@ -1,7 +1,3 @@
-function testFunc () {
-    console.log("test function firing!")   
-}
-
 //BEGIN EA CUSTOM FUNCTION --------------------------------------------------------------
 function switchSubcategory (selectedSubcategory) {
     var categories = {
