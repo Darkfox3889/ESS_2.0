@@ -1,4 +1,4 @@
-//BEGIN EA CUSTOM FUNCTION --------------------------------------------------------------
+//BEGIN EA CUSTOM FUNCTIONS --------------------------------------------------------------
 function switchSubcategory(selectedSubcategory) {
     var categories = {
         accountsAndLogIns: [
@@ -180,7 +180,7 @@ function switchSubcategory(selectedSubcategory) {
         }(categories[selectedSubcategory][i].Link);
     }
 }
-// EVANS RIDICULOUS STATE CHANGING FUNCTIONS*****************************************
+// NEW BUTTON STATE CHANGING FUNCTION*****************************************
 function switchCategoryHighlight(selectedButton) {
     console.log("calling switch category highlight");
     var buttonsToReset = document.getElementsByClassName('selectedCategory');
@@ -189,8 +189,8 @@ function switchCategoryHighlight(selectedButton) {
     }
     selectedButton.className = "selectedCategory";
 }
-// END EVAN"S RIDICULOUS FUNCTIONS****************************************************
-//END EA CUSTOM FUNCTION --------------------------------------------------------------
+// END NEW BUTTON STATE CHANGING FUNCTION****************************************************
+//END EA CUSTOM FUNCTIONS --------------------------------------------------------------
 
 function tsResubmit(searchText) {
 	$("sysparm_search").value = searchText;
