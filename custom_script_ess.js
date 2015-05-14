@@ -1,5 +1,5 @@
 //BEGIN EA CUSTOM FUNCTION --------------------------------------------------------------
-function switchSubcategory (selectedSubcategory) {
+function switchSubcategory(selectedSubcategory) {
     var categories = {
         accountsAndLogIns: [
         {Title: "I'm having trouble logging in to...",
@@ -150,7 +150,8 @@ function switchSubcategory (selectedSubcategory) {
         Link: "catalog_item.do?sysparm_content_url=com.glideapp.servicecatalog_cat_item_view.do%3Fsysparm_id%3D2a5cec2709411500963780fde6ca6edf%26sysparm_no_search%3Dtrue&sysparm_document_key=sc_cat_item,2a5cec2709411500963780fde6ca6edf"}
         ]
     };
-    
+
+    //CREATE SUBCATEGORY ITEMS
     var subcategoryList = document.getElementById('subcategoryList');
     var subcategoryPlaceholder = document.getElementById('subcategoryPlaceholder');
     subcategoryList.innerHTML = "";
@@ -179,6 +180,16 @@ function switchSubcategory (selectedSubcategory) {
         }(categories[selectedSubcategory][i].Link);
     }
 }
+// EVANS RIDICULOUS STATE CHANGING FUNCTIONS*****************************************
+function switchCategoryHighlight(selectedButton) {
+    console.log("calling switch category highlight");
+    var buttonsToReset = document.getElementsByClassName('selectedCategory');
+    for (i = 0; i < buttonsToReset.length; i++) {
+        buttonsToReset[i].className = "";
+    }
+    selectedButton.className = "selectedCategory";
+}
+// END EVAN"S RIDICULOUS FUNCTIONS****************************************************
 //END EA CUSTOM FUNCTION --------------------------------------------------------------
 
 function tsResubmit(searchText) {

@@ -175,12 +175,15 @@ h2 + .section-noborder { margin-bottom:10px!important; }
 #categoryMenuContainer .leftCategoryItemsViewport {position:relative; width:299px; float: left; display: inline; border-right: 1px solid #888888}
 #categoryMenuContainer .leftCategoryItemsViewport ul {margin: 0; padding: 0}
 #categoryMenuContainer .leftCategoryItemsViewport ul li {width: 100%; list-style-type: none; float: right; font-size: 1.2em}
-#categoryMenuContainer .leftCategoryItemsViewport ul li button {padding-left: 2.6em; margin: auto; background: none repeat scroll 0 0 #FFFFFF; color: #304c74; font-weight: 400; font- family: "ProximaNova", Verdana, sans-serif; font-size: 1.3em; text-align: left; width: 100%; height: 4em; float: left; display: inline; border: 0px}
+#categoryMenuContainer .leftCategoryItemsViewport ul li button {padding-left: 2.6em; margin: auto; background-color: #FFFFFF; color: #304c74; font-weight: 400; font- family: "ProximaNova", Verdana, sans-serif; font-size: 1.3em; text-align: left; width: 100%; height: 4em; float: left; display: inline; border: 0px}
 #categoryMenuContainer .leftCategoryItemsViewport ul li button:hover 
 {background-color: #f8f5c6; cursor: pointer}
 #categoryMenuContainer .leftCategoryItemsViewport ul li button:active, #categoryMenuContainer .leftCategoryItemsViewport ul li button:focus 
 {background-color: #f1f3fa; outline: none; border-right: 3px solid #637fba;}
 .categoryChevron {width: 8%; margin-top: 1em; float: left; display: inline; background-color: #f1f3fa}
+/*---------------- NEW CLASS DEFINITION START------------------------------------------------------------------------------------------------------*/
+#categoryMenuContainer .leftCategoryItemsViewport .selectedCategory, #categoryMenuContainer .leftCategoryItemsViewport .selectedCategory:hover {background-color: #f1f3fa; outline: none; border-right: 3px solid #637fba;}
+/*---------------- NEW CLASS DEFINITION END------------------------------------------------------------------------------------------------------*/
 
 #categoryMenuContainer .subCategoryItemsViewport{position:relative; width:660px; height: 935px; float: right; display: inline; background-color: #f1f3fa; text-align: center}
 

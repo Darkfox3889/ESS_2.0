@@ -101,18 +101,18 @@
 			<div id="categoryMenuContainer">
 				<div class="leftCategoryItemsViewport">
                                  	
-                                 <ul> 
-                                 <li><button type="button" onClick="switchSubcategory('accountsAndLogIns')">Accounts & Log-Ins</button></li>
-                                 <li><button type="button" onClick="switchSubcategory('applications')">Applications</button></li>
-                                     <li><button type="button" onClick="switchSubcategory('borrowEquipment')">Borrow Equipment</button></li>
-                                     <li><button type="button" onClick="switchSubcategory('computerEquipment')">Computer Hardware</button></li>
-                    <li><button type="button" onClick="switchSubcategory('crm')">CRM</button></li>
-                    <li><button type="button" onClick="switchSubcategory('email')">E-Mail</button></li>
-                    <li><button type="button" onClick="switchSubcategory('filesAndSharedDrives')">Files & Shared Drives</button></li>
-                    <li><button type="button" onClick="switchSubcategory('mobileDevices')">Mobile Devices</button></li>
-                    <li><button type="button" onClick="switchSubcategory('networkAndWiFi')">Network & Wi-Fi</button></li>
-                    <li><button type="button" onClick="switchSubcategory('printersAndScanners')">Printers & Scanners</button></li>
-                    <li><button type="button" onClick="switchSubcategory('misc')">Misc.</button></li></ul></div>
+                                 <ul id="categoryList"> 
+                                 <li><button type="button" onClick="switchSubcategory('accountsAndLogIns'), switchCategoryHighlight(this)">Accounts & Log-Ins</button></li>
+                                 <li><button type="button" onClick="switchSubcategory('applications'), switchCategoryHighlight(this)">Applications</button></li>
+                                     <li><button type="button" onClick="switchSubcategory('borrowEquipment'), switchCategoryHighlight(this)">Borrow Equipment</button></li>
+                                     <li><button type="button" onClick="switchSubcategory('computerEquipment'), switchCategoryHighlight(this)">Computer Hardware</button></li>
+                    <li><button type="button" onClick="switchSubcategory('crm'), switchCategoryHighlight(this)">CRM</button></li>
+                    <li><button type="button" onClick="switchSubcategory('email'), switchCategoryHighlight(this)">E-Mail</button></li>
+                    <li><button type="button" onClick="switchSubcategory('filesAndSharedDrives'), switchCategoryHighlight(this)">Files & Shared Drives</button></li>
+                    <li><button type="button" onClick="switchSubcategory('mobileDevices'), switchCategoryHighlight(this)">Mobile Devices</button></li>
+                    <li><button type="button" onClick="switchSubcategory('networkAndWiFi'), switchCategoryHighlight(this)">Network & Wi-Fi</button></li>
+                    <li><button type="button" onClick="switchSubcategory('printersAndScanners'), switchCategoryHighlight(this)">Printers & Scanners</button></li>
+                    <li><button type="button" onClick="switchSubcategory('misc'), switchCategoryHighlight(this)">Misc.</button></li></ul></div>
                              
 		                <div class="subCategoryItemsViewport">
                             <div id = "subcategoryPlaceholder">
